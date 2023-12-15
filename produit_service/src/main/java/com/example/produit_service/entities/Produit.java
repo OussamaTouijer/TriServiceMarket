@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 @Entity
-@Data @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder @ToString
+@Data @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder 
 public class Produit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
