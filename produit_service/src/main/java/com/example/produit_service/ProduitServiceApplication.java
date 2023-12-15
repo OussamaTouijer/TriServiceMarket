@@ -25,7 +25,7 @@ public class ProduitServiceApplication {
     CommandLineRunner start(ProduitRepository produitRepository){
         return args -> {
             for(int i=0;i<10;i++){
-                Produit p=Produit.builder().marque("abibas").desc("andjzbdjzbdjz").prix((Float) ((float) (Math.random()*1000))).quantite(100).build();
+                Produit p=Produit.builder().marque("adidas").desc("andjzbdjzbdjz").prix((Float) ((float) (Math.random()*1000))).quantite(100).build();
                 produitRepository.save(p);
             }
 
