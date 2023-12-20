@@ -27,57 +27,28 @@ public class AcheteurServiceApplication {
 
             acheteurRepository.save(Acheteur.builder()
                     .nom("Khaoula Jadimoussa")
-                    .ville("casa").idP(2)
+                    .ville("Casablanca").idP(2)
                     .build());
 
             acheteurRepository.save(Acheteur.builder()
-                    .nom("Salem salem")
-                    .ville("tanger").idP(1)
+                    .nom("Driss Zahrawi ")
+                    .ville("kenitra").idP(4)
                     .build());
 
             acheteurRepository.save(Acheteur.builder()
-                    .nom("Aya aya")
-                    .ville("agadir").idP(2)
+                    .nom("Oussama Touijer ")
+                    .ville("Sale").idP(3)
                     .build());
 
             acheteurRepository.save(Acheteur.builder()
-                    .nom("Jack Pattinson")
-                    .ville("paris")
+                    .nom("Nora Samawi ")
+                    .ville("Marrakech").idP(3)
                     .build());
 
             acheteurRepository.save(Acheteur.builder()
-                    .nom("Ahmad Khan")
-                    .ville("dilhi")
+                    .nom("Hayat Nanah ")
+                    .ville("Tanger").idP(1)
                     .build());
-
-            acheteurRepository.save(Acheteur.builder()
-                    .nom("Michel Duchamps")
-                    .ville("london")
-                    .build());
-
-            acheteurRepository.save(Acheteur.builder()
-                    .nom("Julia Robert")
-                    .ville("kopanhageb")
-                    .build());
-
-            acheteurRepository.save(Acheteur.builder()
-                    .nom("Djamel ALI")
-                    .ville("abu dabi")
-                    .build());
-
-            acheteurRepository.save(Acheteur.builder()
-                    .nom("Luisa Clarck")
-                    .ville("madrid")
-                    .build());
-
-            List<Acheteur> liste = acheteurRepository.findAll();
-
-            for (Acheteur a:liste){
-                System.out.println("*************************");
-                System.out.println(a.getNom());
-                System.out.println(a.getVille());
-            }
-
         };
     }
 }
