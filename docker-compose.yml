@@ -50,6 +50,10 @@ services:
       - '8081:8081'
     expose:
       - '8081'
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 10s
+      retries: 10
     environment:
       - DISCOVERY_SERVICE_URL=http://store-discovery-service:8761/eureka
       - CONFIG_SERVICE_URL=http://store-config-service:9999
@@ -67,7 +71,7 @@ services:
       - DISCOVERY_SERVICE_URL=http://store-discovery-service:8761/eureka
       - CONFIG_SERVICE_URL=http://store-config-service:9999
     depends_on:
-      store-produit-service:
+      store-acheteur-service:
         condition: service_healthy
   store-gateway-service:
     build: ./gateway_service
