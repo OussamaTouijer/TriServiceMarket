@@ -1,0 +1,20 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <table *ngIf="acheteurs" class="table">
+        <thead>
+        <tr>
+          <th>IDAcheteur</th><th>Nom</th>
+          <th>Ville</th><th>IdProduit</th><th>NomProduit</th><th>MarqueProduit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of acheteurs">
+          <td>{{ a.idA }}</td><td>{{ a.nom }}</td>
+          <td>{{ a.ville }}</td><td>{{ a.idP }}</td><td>{{ a.produit.nom }}</td><td>{{ a.produit.marque }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

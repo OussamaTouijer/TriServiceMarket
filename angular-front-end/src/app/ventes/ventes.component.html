@@ -1,0 +1,20 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <table *ngIf="ventes" class="table">
+        <thead>
+        <tr>
+          <th>IDVente</th><th>IdAcheteur</th>
+          <th>IdProduit</th><th>NomAcheteur</th><th>NomProduit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let v of ventes">
+          <td>{{ v.idV }}</td><td>{{ v.idA }}</td>
+          <td>{{ v.idP }}</td><td>{{ v.acheteur.nom }}</td><td>{{ v.produit.nom }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
