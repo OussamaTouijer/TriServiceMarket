@@ -12,8 +12,9 @@ public class Produit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idP;
+    private String nom;
     private String marque;
     private String desc;
-    private Float prix;
+    private Double prix;
     private Integer quantite;
 }
