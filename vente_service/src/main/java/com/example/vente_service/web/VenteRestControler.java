@@ -53,5 +53,24 @@ public class VenteRestControler {
 
     }
 
+    @PutMapping("/ventes/{id}")
+    public void update_Vente(@PathVariable ("id") Integer id, @RequestBody Vente v){
+        Vente vt = venteRepository.findById(id).get();
+        if(v.getIdV()!=null) {vt.setIdV(v.getIdV());}
+        if(v.getIdA()!=null){vt.setIdA(v.getIdA());}
+        if(v.getIdP()!=null){vt.setIdP(v.getIdP());}
+        venteRepository.save(vt);
+    }
+
+
+    @PostMapping("/ventes")
+    public void save_vente(@RequestBody Vente v){
+        venteRepository.save(v);
+    }
+
+    @DeleteMapping("/ventes/{id}")
+    public void delete_vente(@PathVariable ("id") Integer id){
+        venteRepository.deleteById(id);
+    }
 
 }
